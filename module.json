@@ -49,14 +49,8 @@
 			]
 		}
 	},
-	"url": "",
-	"bugs": "",
-	"manifest": "",
-	"download": "",
-	"media": [
-		{
-			"type": "setup",
-			"url": "modules/pf2e-brewrata/assets/setup.webp"
-		}
-	]
+	"url": "https://github.com/MrVauxs/pf2e-brewrata/",
+	"bugs": "https://github.com/MrVauxs/pf2e-brewrata/issues",
+	"manifest": "https://raw.githubusercontent.com/MrVauxs/pf2e-brewrata/latest/releases/module.json",
+	"download": "https://raw.githubusercontent.com/MrVauxs/pf2e-brewrata/latest/releases/module.zip"
 }
