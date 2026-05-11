@@ -102,21 +102,13 @@ class Brewrata {
 						`).join("")}
 					</div>
 					<footer class="brewrata-errata-addendum">
-						Please note that both <b>Update</b> and <b>Replace</b> may break existing effects or relations. You can revert after applying an errata.
+						Please note that both <b>Update</b> and <b>Replace</b> may break existing effects or relations. Use Replace for full-item replacement including making new Rule Element choices. You can revert after applying an errata.
 						<b>Ignore</b> will remove Brewrata from appearing on this item.
 					</footer>
 				</main>
 			`,
 			classes: ["brewrata-dialog"],
-			modal: true,
 			buttons: [
-				{
-					label: "Update",
-					action: "update",
-					icon: "fa-solid fa-check",
-					// @ts-expect-error Ugh
-					callback: (event, button, dialog) => ({ type: "update", value: button.form?.elements['errata-select'].value })
-				},
 				{
 					label: "Replace",
 					action: "replace",
@@ -126,17 +118,24 @@ class Brewrata {
 					callback: (event, button, dialog) => ({ type: "replace", value: button.form?.elements['errata-select'].value })
 				},
 				{
+					label: "Update",
+					action: "update",
+					icon: "fa-solid fa-check",
+					// @ts-expect-error Ugh
+					callback: (event, button, dialog) => ({ type: "update", value: button.form?.elements['errata-select'].value })
+				},
+				{
 					label: "Cancel",
 					action: "cancel",
 					icon: "fa-solid fa-xmark",
 					callback: (event, button, dialog) => ({ type: "cancel" })
 				},
-				{
+				/* {
 					label: "Ignore",
 					action: "ignore",
 					icon: "fa-solid fa-minus",
 					callback: (event, button, dialog) => ({ type: "ignore" })
-				},
+				}, */
 			],
 			// Grab the selected radio value before confirm resolves
 			submit: async (r) => {
@@ -157,9 +156,9 @@ class Brewrata {
 					if (!flags["pf2e-brewrata"]) {
 						flags["pf2e-brewrata"] = { trueUuid: item.sourceId, trueForm: [item.sourceId, item.slug], appliedFrom: errata.module };
 					}
-					const newItem = errata.item.clone({ flags }, { keepId: true });
+					const newItem = errata.item.clone({ flags, _id: item._id, folder: item.folder }, { keepId: true });
 					await item.delete();
-					await item.parent!.createEmbeddedDocuments("Item", [newItem], { keepId: true, keepEmbeddedIds: true });
+					await item.parent!.createEmbeddedDocuments("Item", [newItem.toObject()], { keepId: true, keepEmbeddedIds: true });
 				} else if (result.type === "update") {
 					const flags = item.flags as Record<string, unknown>;
 					if (!flags["pf2e-brewrata"]) {
