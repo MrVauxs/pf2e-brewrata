@@ -1,0 +1,62 @@
+{
+	"id": "pf2e-brewrata",
+	"title": "PF2e Brewrata",
+	"description": "A library module for creating homebrew erratas to existing content",
+	"authors": [
+		{
+			"name": "Vauxs",
+			"discord": "vauxs",
+			"twitter": "@ThatVauxs",
+			"email": "mrvauxs@gmail.com",
+			"ko-fi": "MrVauxs",
+			"patreon": "MrVauxs"
+		}
+	],
+	"version": "dev",
+	"compatibility": {
+		"minimum": "13",
+		"verified": "14"
+	},
+	"esmodules": [
+		"dist/pf2e-brewrata.js"
+	],
+	"styles": [
+		"dist/pf2e-brewrata.css"
+	],
+	"relationships": {
+		"system": [
+			{
+				"id": "pf2e",
+				"type": "system"
+			},
+			{
+				"id": "sf2e",
+				"type": "system"
+			}
+		]
+	},
+	"packs": [],
+	"packFolders": [],
+	"flags": {
+		"canUpload": true,
+		"hotReload": {
+			"extensions": [
+				"css",
+				"json"
+			],
+			"paths": [
+				"styles"
+			]
+		}
+	},
+	"url": "",
+	"bugs": "",
+	"manifest": "",
+	"download": "",
+	"media": [
+		{
+			"type": "setup",
+			"url": "modules/pf2e-brewrata/assets/setup.webp"
+		}
+	]
+}

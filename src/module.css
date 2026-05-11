@@ -1,0 +1,92 @@
+.brewrata-dialog .brewrata-errata-summary > p {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-primary);
+}
+
+.brewrata-errata-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.brewrata-errata-option {
+  cursor: pointer;
+  display: block;
+}
+
+.brewrata-errata-option input[type="radio"] {
+  display: none;
+}
+
+.brewrata-errata-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-data-background);
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+
+.brewrata-errata-option input[type="radio"]:checked + .brewrata-errata-card {
+  border-color: var(--color-data-border);
+  background: var(--color-cool-3);
+}
+
+.brewrata-errata-card:hover {
+  border-color: var(--color-data-border);
+  background: var(--sidebar-entry-hover-bg);
+}
+
+.brewrata-errata-icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+}
+
+.brewrata-errata-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.brewrata-errata-name {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brewrata-errata-module {
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  font-style: italic;
+}
+
+.brewrata-errata-desc {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  line-height: 1.3;
+}
+
+.brewrata-errata-addendum {
+  margin-top: 0.6rem;
+  font-size: 0.72rem;
+  color: var(--color-text-subtle);
+  line-height: 1.4;
+  font-style: italic;
+  text-align: center;
+}
