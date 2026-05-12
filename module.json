@@ -53,6 +53,6 @@
 	"url": "https://github.com/MrVauxs/pf2e-brewrata/",
 	"bugs": "https://github.com/MrVauxs/pf2e-brewrata/issues",
 	"changelog": "https://github.com/MrVauxs/pf2e-brewrata/blob/main/CHANGELOG",
-	"manifest": "https://raw.githubusercontent.com/MrVauxs/pf2e-brewrata/latest/releases/module.json",
-	"download": "https://raw.githubusercontent.com/MrVauxs/pf2e-brewrata/latest/releases/module.zip"
+	"manifest": "https://github.com/MrVauxs/pf2e-brewrata/releases/latest/download/module.json",
+	"download": "https://github.com/MrVauxs/pf2e-brewrata/releases/latest/download/module.json"
 }
