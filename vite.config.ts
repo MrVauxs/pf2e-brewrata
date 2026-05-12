@@ -1,7 +1,6 @@
 import type { Plugin, UserConfig } from "vite";
 import path from "node:path";
 import fs from 'node:fs';
-import vttSync from "foundryvtt-sync/vite";
 import { defineConfig } from "vite";
 import moduleJSON from "./module.json" with { type: "json" };
 import postcssPresetEnv from "postcss-preset-env";
