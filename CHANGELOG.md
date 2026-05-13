@@ -1,3 +1,6 @@
+# 1.1.0
+- Publish to FoundryVTT.
+
 # 1.0.1
 - Tick the module as being a library module.
 
