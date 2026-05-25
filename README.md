@@ -14,12 +14,14 @@ PF2e Wiki: https://github.com/foundryvtt/pf2e/wiki
 ### How to use this module
 
 ```js
-if (game.modules.get("pf2e-brewrata")?.active) {
-  const registry = game.brewrata.register("module-id")
-  registry.errata("item-uuid-or-slug", "errata-uuid")
-  // or
-  registry.errata("item-uuid-or-slug", { uuid: "errata-uuid", description: "Description of the changes done" })
-}
+Hooks.on("ready", () => {
+  if (game.modules.get("pf2e-brewrata")?.active) {
+    const registry = game.brewrata.register("module-id");
+    registry.errata("item-uuid-or-slug", "errata-uuid");
+    // or the following, for adding descriptions of what the errata does
+    registry.errata("item-uuid-or-slug", { uuid: "errata-uuid", description: "Description of the changes done" });
+  }
+});
 ```
 
 
