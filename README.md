@@ -24,4 +24,6 @@ Hooks.on("ready", () => {
 });
 ```
 
+<img width="1741" height="1352" alt="image" src="https://github.com/user-attachments/assets/30bd0414-2e4c-4699-93c6-ef50d75a797d" />
+
 
